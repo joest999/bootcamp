@@ -82,6 +82,6 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 - Copy the Filebeat configuration file to your ELK VM.
 - Update the hosts file to include {webservers} 10.0.0.5, 10.0.0.6; {elkservers} 10.0.0.7
-- Run the playbook, and navigate to http://ELK-Server Public IP:5601 to check that the installation worked as expected.
+- Run the playbook, and navigate to http:// [ELK-Server Public IP:5601] to check that the installation worked as expected.
 
 
