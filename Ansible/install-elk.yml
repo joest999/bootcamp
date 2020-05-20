@@ -4,7 +4,10 @@
     remote_user: joe
     become: true
     tasks:
-
+    
+    - name: Increase virtual memory
+      command: sysctl -w vm.max_map_count=262144
+      
     - name: Install docker.io
       apt:
         force_apt_get: yes
@@ -21,9 +24,6 @@
       pip:
         name: docker
         state: present
-
-    - name: Increase virtual memory
-      command: sysctl -w vm.max_map_count=262144
 
     - name: download and launch a docker elk container
       docker_container:
